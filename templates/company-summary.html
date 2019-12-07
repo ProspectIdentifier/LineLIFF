@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <title>Company Summary</title>
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='dist/css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dist/css/small-card.css') }}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<![endif]-->
+</head>
+
+<body class="skin-default fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader d-none">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Elite admin</p>
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="card card-custom bg-white border-white">
+            <div class="card-custom-img"
+                style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
+            </div>
+            <div class="card-custom-avatar">
+                <img class="img-fluid"
+                    src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+                    alt="Avatar" />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+                <h4 class="card-title">Trend Micro Inc.</h4>
+                <h6 class="text-primary">NAV-1234</h6>
+                <p class="card-text">
+                    A company profile is a professional summary of the business and its activities.
+                </p>
+                <ul class="list-style-none">
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        123-345-789
+                    </li>
+                    <li>
+                        <i class="fa fa-map"></i>
+                        795 Folsom Ave, Suite 600 San Francisco, CADGE 94107
+                    </li>
+                </ul>
+                <div class="mt-1">
+                    <span class="badge badge-info">Reseller</span>
+                    <span class="badge badge-warning">Customer</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <!-- Column -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">VISIT STATASTICS</h5>
+                        <div class="row">
+                            <div class="col-6  m-t-30">
+                                <h1 class="text-info">$347</h1>
+                                <p class="light_op_text">APRIL 2017</p>
+                                <b class="">(150 Sales)</b>
+                            </div>
+                            <div class="col-6">
+                                <div id="sales2" class="text-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">SALES DIFFERENCE</h5>
+                        <div class="row">
+                            <div class="col-6  m-t-30">
+                                <h1 class="text-primary">$647</h1>
+                                <p class="text-muted">APRIL 2017</p>
+                                <b>(150 Sales)</b>
+                            </div>
+                            <div class="col-6">
+                                <div id="sales1" class="text-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info box -->
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex no-block align-items-center">
+                                <div>
+                                    <h3><i class="icon-screen-desktop"></i></h3>
+                                    <p class="text-muted">MYNEW CLIENTS</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <h2 class="counter text-primary">23</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex no-block align-items-center">
+                                <div>
+                                    <h3><i class="icon-note"></i></h3>
+                                    <p class="text-muted">NEW PROJECTS</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <h2 class="counter text-cyan">169</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="progress">
+                                <div class="progress-bar bg-cyan" role="progressbar" style="width: 85%; height: 6px;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex no-block align-items-center">
+                                <div>
+                                    <h3><i class="icon-doc"></i></h3>
+                                    <p class="text-muted">NEW INVOICES</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <h2 class="counter text-purple">157</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="progress">
+                                <div class="progress-bar bg-purple" role="progressbar" style="width: 85%; height: 6px;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+
+        </div>
+        <!-- End Info box -->
+        <div class="row">
+            <!-- Column -->
+            <div class="col-lg-8 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex m-b-40 align-items-center no-block">
+                            <h5 class="card-title ">YEARLY SALES</h5>
+                            <div class="ml-auto">
+                                <ul class="list-inline font-12">
+                                    <li><i class="fa fa-circle text-cyan"></i> Iphone</li>
+                                    <li><i class="fa fa-circle text-primary"></i> Ipad</li>
+                                    <li><i class="fa fa-circle text-purple"></i> Ipod</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="morris-area-chart" style="height: 340px;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-lg-4 col-md-12">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Today's Schedule and sales overview -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <!-- Column -->
+            <div class="col-lg-4 col-md-12">
+                <div class="row">
+
+
+                    <!-- Column -->
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 text-right">
+                <button class="btn btn-info" id="closewindowbutton">Done</button>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='dist/js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='dist/js/bootstrap.min.js') }}"></script>
+        <!-- slimscrollbar scrollbar JavaScript -->
+        <script src="{{ url_for('static', filename='dist/js/perfect-scrollbar.jquery.min.js') }}"></script>
+        <!--Custom JavaScript -->
+        <script src="{{ url_for('static', filename='dist/js/custom.min.js') }}"></script>
+        <!-- ============================================================== -->
+        <!-- This page plugins -->
+        <!-- ============================================================== -->
+        <!--morris JavaScript -->
+        <script src="{{ url_for('static', filename='dist/js/raphael/raphael-min.js') }}"></script>
+        <script src="{{ url_for('static', filename='dist/js/morrisjs/morris.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='dist/js/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+
+        <!-- Chart JS -->
+        <script src="{{ url_for('static', filename='dist/js/dashboard3.js') }}"></script>
+
+        <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+        <script>
+            window.onload = function (e) {
+                liff.init(function (data) {
+                    initializeApp(data);
+                });
+            };
+            function initializeApp(data) {
+                // closeWindow call
+                document.getElementById('closewindowbutton').addEventListener('click', function () {
+                    liff.closeWindow();
+                });
+            }
+        </script>
+</body>
+
+</html>

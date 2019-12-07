@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <title>Opportunity</title>
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='dist/css/fontawesome.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dist/css/style.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dist/css/small-card.css') }}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<![endif]-->
+</head>
+
+<body class="skin-default fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader d-none">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Elite admin</p>
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xlg-4">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Customer has interest in</h4>
+                            <select class="form-control" id="product">
+                                <option>Office Scan</option>
+                                <option>Office Scan2</option>
+                                <option>Office Scan3</option>
+                                <option>Office Scan4</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mt-1">
+                            <h4>Budget</h4>
+                            <input id="budget" class="form-control" type="number" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button id="closewindowbutton" class="btn btn-default pull-left">Cancel</button>
+                <button id="sendmessagebutton" class="btn btn-info pull-right">Add Opportunity</button>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='dist/js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='dist/js/bootstrap.min.js') }}"></script>
+        <!-- slimscrollbar scrollbar JavaScript -->
+        <script src="{{ url_for('static', filename='dist/js/perfect-scrollbar.jquery.min.js') }}"></script>
+        <!--Custom JavaScript -->
+        <script src="{{ url_for('static', filename='dist/js/custom.min.js') }}"></script>
+        <!-- ============================================================== -->
+        <!-- This page plugins -->
+        <!-- ============================================================== -->
+        <!--morris JavaScript -->
+        <script src="{{ url_for('static', filename='dist/js/raphael/raphael-min.js') }}"></script>
+        <script src="{{ url_for('static', filename='dist/js/morrisjs/morris.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='dist/js/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+        <!-- Chart JS -->
+
+        <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+        <script>
+            window.onload = function (e) {
+                liff.init(function (data) {
+                    initializeApp(data);
+                });
+            };
+            function initializeApp(data) {
+                // closeWindow call
+                document.getElementById('closewindowbutton').addEventListener('click', function () {
+                    liff.closeWindow();
+                });
+
+                // sendMessages call
+                document.getElementById('sendmessagebutton').addEventListener('click', function () {
+                    liff.sendMessages([
+                        {
+                            type: 'text',
+                            text: "Customer has interest in \"" +
+                                $("#product").val() +
+                                "\" and has \"" +
+                                $("#budget").val() +
+                                "\" budget"
+                        }
+                    ]).then(function () {
+                        liff.closeWindow();
+                    }).catch(function (error) {
+                        window.alert("Error sending message: " + error);
+                    });
+                });
+            }
+        </script>
+</body>
+
+</html>
